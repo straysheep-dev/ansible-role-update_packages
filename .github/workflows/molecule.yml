@@ -29,6 +29,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           path: update_packages
+          submodules: recursive
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip ansible molecule molecule-plugins[docker] docker
