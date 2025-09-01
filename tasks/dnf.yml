@@ -23,8 +23,12 @@
     executable: /bin/bash
   register: reboot_required
   ignore_errors: true
+  tags:
+    - molecule-idempotence-notest
 
 - name: "Set reboot condition"
   ansible.builtin.set_fact:
     reboot_condition: true
   when: reboot_required.stdout == 'true'
+  tags:
+    - molecule-idempotence-notest
