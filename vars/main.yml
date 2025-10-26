@@ -1,2 +1,5 @@
 ---
 # vars file for update_packages
+
+# Initialize variables
+reboot_condition: false
